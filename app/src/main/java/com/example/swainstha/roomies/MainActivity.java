@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
-        toolbar.setTitle("News");
+        toolbar.setTitle("Expenses");
 
         //initializing a bottombar navigation view with the bottombar view  and setting the callback function
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_nav);
@@ -51,8 +51,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     return true;
                 case R.id.action_chat:
                     toolbar.setTitle("Chat");
-//                    fragment = new PositionFragment();
-//                    loadFragment(fragment);
+                    fragment = new ChatFragment();
+                    loadFragment(fragment);
                     return true;
                 case R.id.action_stock:
                     toolbar.setTitle("Stock");
