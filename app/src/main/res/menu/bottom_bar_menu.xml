@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_expenses"
+        android:icon="@drawable/money"
+        android:title="Expenses"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_summary"
+        android:icon="@drawable/summary"
+        android:title="Summary"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_chat"
+        android:icon="@drawable/chat_room"
+        android:title="Chat"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_stock"
+        android:icon="@drawable/stock"
+        android:title="Stock"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_reminder"
+        android:icon="@drawable/reminder"
+        android:title="Reminders"
+        app:showAsAction="ifRoom"/>
+</menu>
