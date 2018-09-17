@@ -17,6 +17,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
+    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
         toolbar.setTitle("Expenses");
+
+        toolbar.setTitle("Expenses");
+        fragment = new ExpensesFragment();
+        loadFragment(fragment);
 
         //initializing a bottombar navigation view with the bottombar view  and setting the callback function
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_nav);
@@ -37,12 +42,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment;
+
             switch (item.getItemId()) {
                 case R.id.action_expenses:
                     toolbar.setTitle("Expenses");
-//                    fragment = new CommonFragment();
-//                    loadFragment(fragment);
+                    fragment = new ExpensesFragment();
+                    loadFragment(fragment);
                     return true;
                 case R.id.action_summary:
                     toolbar.setTitle("Summary");
