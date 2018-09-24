@@ -51,8 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     return true;
                 case R.id.action_summary:
                     toolbar.setTitle("Summary");
-//                    fragment = new MatchFragment();
-//                    loadFragment(fragment);
+                    toolbar.hideOverflowMenu();
+                    fragment = new SummaryParentFragment();
+                    loadFragment(fragment);
                     return true;
                 case R.id.action_chat:
                     toolbar.setTitle("Chat");

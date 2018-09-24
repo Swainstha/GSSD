@@ -18,14 +18,14 @@ public class Expenses {
     private int id;
     //private Date date;
     private String items;
-    private double cost;
+    private int cost;
 
 //    public Expenses(@NonNull Date date, @NonNull String items, @NonNull double cost) {
 //        this.date = date;
 //        this.items = items;
 //        this.cost = cost;
 //    }
-public Expenses(@NonNull String items, @NonNull double cost) {
+public Expenses(@NonNull String items, @NonNull int cost) {
     this.items = items;
     this.cost = cost;
 }
@@ -43,7 +43,7 @@ public Expenses(@NonNull String items, @NonNull double cost) {
         this.items = items;
     }
 
-    public void setCost(double cost) {
+    public void setCost(int cost) {
         this.cost = cost;
     }
 
@@ -55,7 +55,7 @@ public Expenses(@NonNull String items, @NonNull double cost) {
         return items;
     }
 
-    public double getCost() {
+    public int getCost() {
         return cost;
     }
 

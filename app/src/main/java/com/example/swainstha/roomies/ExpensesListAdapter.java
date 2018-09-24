@@ -16,11 +16,13 @@ import java.util.List;
 public class ExpensesListAdapter extends RecyclerView.Adapter<ExpensesListAdapter.ExpensesViewHolder> {
 
     class ExpensesViewHolder extends RecyclerView.ViewHolder {
-        private final TextView wordItemView;
+        private final TextView expensesItemView;
+        private final TextView expensesCostView;
 
         private ExpensesViewHolder(View itemView) {
             super(itemView);
-            wordItemView = itemView.findViewById(R.id.textView);
+            expensesItemView = itemView.findViewById(R.id.itemTextView);
+            expensesCostView = itemView.findViewById(R.id.costTextView);
         }
     }
 
@@ -39,10 +41,13 @@ public class ExpensesListAdapter extends RecyclerView.Adapter<ExpensesListAdapte
     public void onBindViewHolder(ExpensesViewHolder holder, int position) {
         if (mExpenses != null) {
             Expenses current = mExpenses.get(position);
-            holder.wordItemView.setText(current.getItems());
+            holder.expensesItemView.setText(current.getItems());
+            String cost = current.getCost() + "";
+            holder.expensesCostView.setText(cost);
         } else {
             // Covers the case of data not being ready yet.
-            holder.wordItemView.setText("No Word");
+            holder.expensesItemView.setText("No Item");
+            holder.expensesItemView.setText("No Cost");
         }
     }
 

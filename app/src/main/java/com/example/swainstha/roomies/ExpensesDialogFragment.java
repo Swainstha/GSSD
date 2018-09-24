@@ -77,8 +77,6 @@ public class ExpensesDialogFragment extends DialogFragment {
             }
         });
 
-
-
         return v;
     }
 

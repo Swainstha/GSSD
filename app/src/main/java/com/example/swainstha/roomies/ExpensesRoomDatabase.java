@@ -15,7 +15,7 @@ import android.support.annotation.NonNull;
 import java.util.Date;
 
 
-@Database(entities = {Expenses.class}, version = 1)
+@Database(entities = {Expenses.class}, version = 2)
 public abstract class ExpensesRoomDatabase extends RoomDatabase {
     public abstract ExpensesDao expensesDao();
 
